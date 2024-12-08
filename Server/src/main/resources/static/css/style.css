@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1.5vh;
+    width: 96%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.logo {
+    float: left;
+    height: 27px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.pulsanti {
+    float: right;
+    margin-top: 10px;
+}
+
+.pulsanti a {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #2323ff;
+    color: white;
+    font-variant: small-caps;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.pulsanti a:hover {
+    background-color: #11f;
+}
+
+.contenuto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Noto Sans", sans-serif;
+    /*Comment for divide div*/
+    text-align: center;
+    font-variant: small-caps;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.contenuto h1 {
+    padding: 10px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    /*Decomment for divide div*/
+    /*text-align: center;*/
+    /*font-variant: small-caps;*/
+    /*border-radius: 10px;*/
+    /*background-color: rgba(255, 255, 255, 0.4);*/
+}
+
+.contenuto p {
+    padding: 15px;
+    font-size: 18px;
+    /*Decomment for divide div*/
+    /*text-align: center;*/
+    /*font-variant: small-caps;*/
+    /*border-radius: 10px;*/
+    /*background-color: rgba(255, 255, 255, 0.4);*/
+}

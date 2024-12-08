@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <link rel="icon" type="image/png" href="/img/icon.png">
+    <title>SRP | Home</title>
+    <script src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/sfondo.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="/"><img class="logo" src="/img/icon.png" alt="logo"></a>
+    <div class="pulsanti">
+        <a th:if="${loggedIn} == 'logout'" href="/admin">Admin</a>
+        <a th:if="${loggedIn} == 'login'" href="/login">Login</a>
+        <a th:if="${loggedIn} == 'logout'" href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+
+<div class="column">
+    <div class="contenuto">
+        <h1>Welcome!</h1>
+        <p>This is <span style="font-weight: bolder">Social Redirect Platform</span>.</p>
+    </div>
+</div>
+</body>
+</html>

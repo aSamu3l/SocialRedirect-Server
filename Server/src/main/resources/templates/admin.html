@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="_csrf" th:content="${_csrf.token}">
+    <meta name="_csrf_header" th:content="${_csrf.headerName}">
+    <link rel="icon" type="image/png" href="/img/icon.png">
+    <title>SRP | Admin</title>
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/admin/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/sfondo.css">
+    <link rel="stylesheet" href="/css/admin/style.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="/"><img class="logo" src="/img/icon.png" alt="logo"></a>
+    <div class="pulsanti">
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+<div class="contenuto">
+    <div class="div-t">
+        <table>
+            <thead>
+            <tr style="position: sticky; top: 0; z-index: 5">
+                <th class="border-padding th-left" style="text-align: center">ID</th>
+                <th class="border-side">Alias</th>
+                <th class="border-side">Destination</th>
+                <th class="border-side" style="text-align: center"><i class="fas fa-bars"></i></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr style="position: sticky; top: 35px; z-index: 5">
+                <td class="border-padding td-left" style="text-align: center">#</td>
+                <td class="border-side">
+                    <input style="width: 99%" type="text" id="alias" name="alias" aria-label="Alias">
+                </td>
+                <td class="border-side">
+                    <input style="width: 99%" type="text" id="destination" name="destination" aria-label="destination">
+                </td>
+                <td class="border-side" style="text-align: center">
+                    <i class="fas fa-plus" onclick="createAlias()"></i>
+                </td>
+            </tr>
+            <tr th:each="alias, iterStat : ${aliases}" th:id="'row-' + ${alias.getId()}">
+                <td class="border-padding td-left" style="text-align: center" th:text="${alias.getId()}"></td>
+                <td class="border-side">
+                    <span class="truncate-desc" th:text="${alias.getAlias()} + ${mydomain}"></span>
+                </td>
+                <td class="border-side">
+                    <span th:id="'destination' + ${alias.getId()}" th:text="${alias.getDestination()}"></span>
+                </td>
+                <td class="border-side" style="text-align: center">
+                    <i class="fas fa-trash " th:onclick="'javascript:deleteFunction(\'' + ${alias.getId()} + '\');'"></i>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

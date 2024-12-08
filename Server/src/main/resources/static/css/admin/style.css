@@ -1,0 +1,285 @@
+body {
+    padding: 0;
+    font-family: Calibri, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1.5vh;
+    width: 96%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+table {
+    width: 100%;
+    margin: 0 0 0 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+/*COLONNE*/
+table th:nth-child(1), table td:nth-child(1) {
+    width: 5%;
+}
+
+table th:nth-child(2), table td:nth-child(2) {
+    width: 30%;
+}
+
+table th:nth-child(3), table td:nth-child(3) {
+    width: 60%;
+}
+
+table th:nth-child(4), table td:nth-child(4) {
+    width: 5%;
+}
+
+th, td {
+    position: relative;
+    overflow: hidden;
+}
+
+.truncate-desc {
+    display: inline-block;
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+.truncate-url {
+    display: inline-block;
+    width: 85%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+.div-t {
+    display: block;
+    width: 98%;
+    height: 96%;
+    /*border-radius: 10px;*/
+    margin: 15px auto;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.div-t::-webkit-scrollbar {
+    display: none;
+}
+
+.border-side {
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.border-padding {
+    padding: 6px;
+}
+
+thead tr{
+    background-color: #0163a1;
+    color: #fff;
+}
+
+tbody tr {
+    height: 33px !important;
+}
+
+.th-left {
+    border-right: 1px solid #ddd;
+}
+
+.th-right {
+    border-left: 1px solid #ddd;
+}
+
+.td-left {
+    border-right: 1px solid #ddd;
+}
+
+.td-right {
+    border-left: 1px solid #ddd;
+}
+
+td {
+    font-size: 14px;
+}
+
+/*pari*/
+tbody tr:nth-child(even) {
+    background-color: #a1caf1;
+}
+
+/*dispari*/
+tbody tr:nth-child(odd) {
+    background-color: #85abce;
+}
+
+tbody tr:hover {
+    background-color: #4882bf;
+}
+
+input[type="text"] {
+    background: none;
+    border-bottom-color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: black;
+    font-weight: bold;
+}
+
+tbody .fas {
+    cursor: pointer;
+}
+
+.i-right {
+    margin-left: 10px;
+    float: right;
+}
+
+.i-center {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.logo {
+    float: left;
+    height: 27px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.pulsanti {
+    float: right;
+    margin-top: 10px;
+}
+
+.pulsanti a {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #2323ff;
+    color: white;
+    font-variant: small-caps;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.pulsanti a:hover {
+    background-color: #11f;
+}
+
+.contenuto {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%, -45%);
+    height: 80%;
+    width: 96%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+}
+
+.paginazione {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%, -45%);
+    height: 4%;
+    width: 15%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginazione-left {
+    float: left;
+    margin-top: 2px;
+    margin-right: 10px;
+    font-size: 200%;
+    cursor: pointer;
+}
+
+.paginazione-right {
+    float: right;
+    margin-top: 2px;
+    margin-left: 10px;
+    font-size: 200%;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.qr-code-container {
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    position: relative;
+    max-width: 40%;
+}
+
+.deleting {
+    background-color: #f44 !important;
+}
+
+.deleting:hover {
+    background-color: #f44 !important;
+}
+
+.fa-search, .fa-x, .fa-rotate{
+    cursor: pointer;
+}
+
+#canvas canvas {
+    width: 100%;
+}
