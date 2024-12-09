@@ -80,7 +80,8 @@ systemctl start redirects
 a2ensite redirects
 systemctl restart apache2
 ```
-8. (Optional) Configure Certbot to get a certificate for the domain
+8. Add subdomain in your DNS configuration
+9. (Optional) Configure Certbot to get a certificate for the domain
 ```shell
 certbot --apache -d gh.yourdomain.com -d github.yourdomain.com
 ```
